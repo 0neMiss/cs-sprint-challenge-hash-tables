@@ -2,9 +2,21 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dict = {}
+    result = []
+    #first i need to loop through the list of lists and make a
+    for index in range(0, len(arrays[0])):
+        dict[arrays[0][index]] = index
+    print(dict)
+    arrays.pop(0)
+    for array in arrays:
+        for item in array:
+            if item in dict:
+                result.append(item)
 
-    return result
+    return item
+
+
 
 
 if __name__ == "__main__":
